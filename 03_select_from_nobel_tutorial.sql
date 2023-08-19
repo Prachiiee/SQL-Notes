@@ -56,7 +56,16 @@ SELECT * FROM nobel
 WHERE yr < 1910 AND subject = 'Medicine' OR
 yr >= 2004 AND subject = 'Literature';
 
--- 11. 
+-- 11. Find all details of the prize won by PETER GRÜNBERG
+SELECT * 
+FROM nobel
+WHERE winner = 'Peter Grünberg'
+
+-- 12.List the winners, year and subject where the winner starts with Sir. Show the the most recent first, then by name order.
+SELECT winner, yr, subject
+FROM nobel
+WHERE winner LIKE 'Sir%'
+ORDER BY yr DESC, winner ASC
 
 
 
